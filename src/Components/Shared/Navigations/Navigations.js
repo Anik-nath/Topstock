@@ -19,7 +19,7 @@ const Navigations = () => {
         bg="light"
         variant="light"
       >
-        <Container>
+        <Container fluid className="px-lg-5">
           <Navbar.Brand as={HashLink} to="/home" className="fs-2">
             <span style={{ color: "orangered" }} className="fw-bold">
               Top
