@@ -3,11 +3,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ChangeTitle } from "../../../titlechange/titlechange";
 
-const About = () => {
-  ChangeTitle("About us");
-  return (
-    <div>
-      <div
+const Faq = () => {
+    ChangeTitle("FAQ");
+    return (
+        <div>
+            <div
         id="banner"
         className="bg-light px-lg-0 px-1 d-flex flex-column justify-content-center align-items-center"
         style={{ height: "60vh" }}
@@ -15,13 +15,13 @@ const About = () => {
         <Container>
           <Row>
             <Col lg={6} sm={12} xs={12} md={12} className="pt-lg-0 pt-5 bg-danger mx-auto text-center">
-              <h1>About Us</h1>
+              <h1>FAQ</h1>
             </Col>
           </Row>
         </Container>
       </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default About;
+export default Faq;

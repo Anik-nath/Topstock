@@ -6,6 +6,7 @@ import {
   FormControl,
   Nav,
   Navbar,
+  NavDropdown,
 } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
 const Navigations = () => {
@@ -41,6 +42,13 @@ const Navigations = () => {
               <Nav.Link className="mx-lg-2" as={HashLink} to="/contact">
                 Contact
               </Nav.Link>
+              <NavDropdown title="Pages" id="basic-nav-dropdown">
+                <NavDropdown.Item as={HashLink} to="/terms">Terms & Conditions</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} to="/privacy">Our Privacy</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} to="/faq">FAQ</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} to="/blog">Blog</NavDropdown.Item>
+                <NavDropdown.Item as={HashLink} to="/register">Login & Register</NavDropdown.Item>
+              </NavDropdown>
             </Nav>
             <Nav>
               <Form className="my-2 my-lg-0">
