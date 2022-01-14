@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { ChangeTitle } from "../../../titlechange/titlechange";
+import ProductCompany from "../../Shared/ProductCompany/ProductCompany";
 
 const ProductDetails = () => {
   ChangeTitle("Product details");
@@ -113,6 +114,9 @@ const ProductDetails = () => {
           </Col>
         </Row>
       </Container>
+      <div className="">
+          <ProductCompany></ProductCompany>
+      </div>
     </div>
   );
 };
