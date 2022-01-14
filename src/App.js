@@ -8,6 +8,7 @@ import Footer from "./Components/Shared/Footer/Footer";
 import Shop from "./Components/Pages/Shop/Shop";
 import Contact from "./Components/Pages/Contact/Contact";
 import Faq from "./Components/Pages/Faq/Faq";
+import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/shop" element={<Shop></Shop>}></Route>
+          <Route path="/productdetials/:id" element={<ProductDetails></ProductDetails>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>
         </Routes>

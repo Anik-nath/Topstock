@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Accordion, Card, Col, Container, Row, useAccordionButton } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ChangeTitle } from "../../../titlechange/titlechange";
 
@@ -14,7 +14,24 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  function CustomToggle({ children, eventKey }) {
+    const decoratedOnClick = useAccordionButton(eventKey, () =>
+      console.log('totally custom!'),
+    );
+  
+    return (
+      <span
+        type="button"
+        style={{ backgroundColor: 'none' }}
+        onClick={decoratedOnClick}
+      >
+        {children}
+      </span>
+    );
+  }
+
   return (
+    
     <div>
       <div
         id="banner"
@@ -31,20 +48,66 @@ const Shop = () => {
               className="pt-lg-0 pt-5 mx-auto text-center"
             >
               <h1 className="display-4 fw-bold">Shop</h1>
-              <p className="fs-6 pt-3"><Link style={{color:"#333",textDecoration:"none"}} to="/home">Home</Link> / <span style={{color:"orangered"}}>Shop</span></p>
+              <p className="fs-6 pt-3">
+                <Link
+                  style={{ color: "#333", textDecoration: "none" }}
+                  to="/home"
+                >
+                  Home
+                </Link>{" "}
+                / <span style={{ color: "orangered" }}>Shop</span>
+              </p>
             </Col>
           </Row>
         </Container>
       </div>
       <div className="shop py-5">
         <Container>
-          <Row className="g-4">
-            {products.map((product) => (
-               <Col key={product._id} lg={3} sm={12} xs={12} md={3}>
+          <Row>
+            <Col lg={3} md={3} sm={12} xs={12}>
+              <h5 className="fw-bold">Product Categories</h5>
+              <Accordion defaultActiveKey="0">
+                <div>
+                  <div className="d-flex justify-content-between bg-white">
+                    <span className="fs-6">Accesories</span>
+                    <CustomToggle eventKey="0"><i className="fas fa-chevron-right"></i></CustomToggle>
+                  </div>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>
+                      <p className="mb-1">Floor</p>
+                      <p className="mb-1">Outdoor</p>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </div>
+                <div>
+                  <div className="d-flex justify-content-between bg-white">
+                    <span className="fs-6">Accesories</span>
+                    <CustomToggle eventKey="1"><i className="fas fa-chevron-right"></i></CustomToggle>
+                  </div>
+                  <Accordion.Collapse eventKey="1">
+                    <Card.Body>
+                      <p className="mb-1">Floor</p>
+                      <p className="mb-1">Outdoor</p>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </div>
+
+                
+              </Accordion>
+              <h5 className="fw-bold py-2">Filter By Price</h5>
+              <h5 className="fw-bold">Popular Product</h5>
+
+            </Col>
+            <Col lg={9} md={9} sm={12} xs={12}>
+              <Row className="g-3">
+                {products.map((product) => (
+               <Col key={product._id} lg={4} sm={12} xs={12} md={6}>
                  <div className="card bg-light">
+                 <Link to={`/productdetials/${product._id}`}>
                      <div style={{height:"300px"}}> 
                          <img className="w-100 h-100 rounded" src={product.image} alt="" />
                      </div>
+                  </Link>
                  </div>
                  <div className="bg-white d-flex flex-column pt-2">
                    <span className="fs-6">{product.title}</span>
@@ -52,6 +115,8 @@ const Shop = () => {
                    </div>
                </Col>
             ))}
+              </Row>
+            </Col>
           </Row>
         </Container>
       </div>
@@ -60,26 +125,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
-/* 
-https://i.postimg.cc/L4wvZ5Gc/mega-menu-bg.jpg
-https://i.postimg.cc/NMV8TCC6/prduct-detl-large-img11.jpg
-https://i.postimg.cc/65ZcVwXy/prduct-detl-large-img5.jpg
-https://i.postimg.cc/SxprD5SV/prduct-detl-large-img6.jpg
-https://i.postimg.cc/N0sxwHrH/prduct-detl-thamb11.jpg
-https://i.postimg.cc/kgFyZcDC/prduct-detl-thamb5.jpg
-https://i.postimg.cc/JntcsCx7/prduct-detl-thamb6.jpg
-https://i.postimg.cc/QCTQqgvR/product1.jpg
-https://i.postimg.cc/QtB1XkNH/product10.jpg
-https://i.postimg.cc/W3QrtFtS/product11.jpg
-https://i.postimg.cc/zvKhhzgN/product12.jpg
-https://i.postimg.cc/GpXx3mkS/product2.jpg
-https://i.postimg.cc/2jb7mm32/product3.jpg
-https://i.postimg.cc/pVwYL7Fx/product4.jpg
-https://i.postimg.cc/gk3yXDVh/product5.jpg
-https://i.postimg.cc/4xZ6z9PS/product6.jpg
-https://i.postimg.cc/P54mK5Fr/product7.jpg
-https://i.postimg.cc/5tK8dkVh/product8.jpg
-https://i.postimg.cc/tg4FcGLd/product9.jpg
-
-*/
