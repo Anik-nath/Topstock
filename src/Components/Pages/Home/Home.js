@@ -7,6 +7,9 @@ import card2 from "../../../images/banner2.jpg";
 import card3 from "../../../images/banner3.jpg";
 import card4 from "../../../images/banner4.jpg";
 import { ChangeTitle } from "../../../titlechange/titlechange";
+import ProductCompany from "../../Shared/ProductCompany/ProductCompany";
+import NewsBlog from "../../Shared/NewsBlog/NewsBlog";
+import PopularProduct from "../../Shared/PopularProduct/PopularProduct";
 const Home = () => {
   ChangeTitle("home");
   const cardbg1 = {
@@ -64,7 +67,7 @@ const Home = () => {
           </Row>
         </Container>
       </div>
-      <div className="py-5">
+      <div id="showcase" className="py-5">
         <Container>
           <Row className="g-3">
             <Col lg={6} md={6} sm={12} xs={12}>
@@ -72,7 +75,7 @@ const Home = () => {
                 <p>Mega Save 20%</p>
                 <h3 className="py-2">Verne Rattan Chair<br />with Cushion</h3>
                 <Link to="/shop">
-                <button className="myButton rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
+                <button className="showcase-button rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
               </Link>
               </div>
             </Col>
@@ -81,7 +84,7 @@ const Home = () => {
                 <p>Mega Save 20%</p>
                 <h3 className="py-2">Verne Rattan Chair<br />with Cushion</h3>
                 <Link to="/shop">
-                <button className="myButton rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
+                <button className="showcase-button rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
               </Link>
               </div>
             </Col>
@@ -90,7 +93,7 @@ const Home = () => {
                 <p>Mega Save 20%</p>
                 <h3 className="py-2">Verne Rattan Chair<br />with Cushion</h3>
                 <Link to="/shop">
-                <button className="myButton rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
+                <button className="showcase-button rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
               </Link>
               </div>
             </Col>
@@ -99,13 +102,56 @@ const Home = () => {
                 <p>Mega Save 20%</p>
                 <h3 className="py-2">Verne Rattan Chair<br />with Cushion</h3>
                 <Link to="/shop">
-                <button className="myButton rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
+                <button className="showcase-button rounded-pill my-2">Shop Now <i className="fas fa-arrow-right"></i> </button>
               </Link>
               </div>
             </Col>
             
           </Row>
         </Container>
+      </div>
+      <div>
+        <PopularProduct></PopularProduct>
+      </div>
+      <div id="service" className="bg-light py-5">
+        <Container>
+          <Row className="g-3 py-3">
+            <Col className="d-flex align-items-center justify-content-lg-around gap-3" lg={3} md={3} sm={6} xs={12}>
+            <i style={{color:"orangered"}} className="fas fa-truck fs-2"></i>
+            <div>
+            <h5 className="mb-0">Free Transport</h5>
+            <span>Order Over $100</span>
+            </div>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-lg-around gap-3" lg={3} md={3} sm={6} xs={12}>
+            <i style={{color:"orangered"}} className="fas fa-redo-alt fs-2"></i>
+            <div>
+            <h5 className="mb-0">Money Back</h5>
+            <span>Order Over $100</span>
+            </div>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-lg-around gap-3" lg={3} md={3} sm={6} xs={12}>
+            <i style={{color:"orangered"}} className="fas fa-shield-alt fs-2"></i>
+            <div>
+            <h5 className="mb-0">Trusted & Security</h5>
+            <span>Order Over $100</span>
+            </div>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-lg-around gap-3" lg={3} md={3} sm={6} xs={12}>
+            <i style={{color:"orangered"}} className="fas fa-tools fs-2"></i>
+            <div>
+            <h5 className="mb-0">24/7 Support</h5>
+            <span>Order Over $100</span>
+            </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div id="newsBlog">
+        <NewsBlog></NewsBlog>
+      </div>
+      <div id="company">
+        <ProductCompany></ProductCompany>
       </div>
     </div>
   );

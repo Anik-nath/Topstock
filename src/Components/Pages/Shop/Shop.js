@@ -137,12 +137,12 @@ const Shop = () => {
               </Accordion>
               <h5 className="fw-bold py-2">Filter By Price</h5>
               <div>
-                <label for="customRange3" class="form-label">
+                <label for="customRange3" className="form-label">
                   Price : $0 - $400
                 </label>
                 <input
                   type="range"
-                  class="form-range"
+                  className="form-range"
                   min="0"
                   max="400"
                   step="50"

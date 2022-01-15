@@ -11,10 +11,14 @@ import Faq from "./Components/Pages/Faq/Faq";
 import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
 import AuthProvider from "./Context/AuthProvider";
 import Login from "./Components/Pages/Login/Login";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
     <div className="App">
+      <div>
+      <ScrollToTop smooth color="orangered"/>
+      </div>
       <AuthProvider>
       <BrowserRouter>
       <Navigations></Navigations>
