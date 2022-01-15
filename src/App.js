@@ -9,10 +9,13 @@ import Shop from "./Components/Pages/Shop/Shop";
 import Contact from "./Components/Pages/Contact/Contact";
 import Faq from "./Components/Pages/Faq/Faq";
 import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
+import AuthProvider from "./Context/AuthProvider";
+import Login from "./Components/Pages/Login/Login";
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
       <Navigations></Navigations>
         <Routes>
@@ -22,10 +25,12 @@ function App() {
           <Route path="/shop" element={<Shop></Shop>}></Route>
           <Route path="/productdetials/:id" element={<ProductDetails></ProductDetails>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

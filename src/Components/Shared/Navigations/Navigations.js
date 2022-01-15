@@ -9,7 +9,18 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
+import useAuth from '../../../Hooks/useAuth';
+
 const Navigations = () => {
+  const {user,signout} = useAuth();
+
+  const handleSignOut =()=>{
+    if (window.confirm("Want to signout? Press Ok") === true) {
+      signout();
+    } else {
+      alert("Stay Login");
+    }
+  }
   return (
     <>
       <Navbar
@@ -61,9 +72,19 @@ const Navigations = () => {
               </Form>
             </Nav>
             <Nav style={{ fontWeight: "500" }}>
-              <Nav.Link className="mx-lg-2" as={HashLink} to="/login">
+              {
+                !user.email ? 
+                <Nav.Link className="mx-lg-2" as={HashLink} to="/login">
                 Login
               </Nav.Link>
+              :
+              <div>
+                <button onClick={handleSignOut} className="mx-lg-2 ps-lg-3 ps-0 btn mb-lg-0 mb-4 ">
+                logout
+              </button>
+              </div>
+              }
+                          
               <Nav.Link as={HashLink} to="/cart">
                 <i className="fas fa-shopping-cart position-relative fs-5">
                   <Badge
@@ -78,7 +99,11 @@ const Navigations = () => {
                 <i className="far fa-heart mx-lg-2 fs-5"></i>
               </Nav.Link>
               <Nav.Link eventKey={2} href="#user">
-                <i className="fas fa-user-circle fs-5"></i>
+                {
+                  !user.email ? <i className="fas fa-user-circle fs-5"></i>
+                  : <div><img style={{width:"30px",height:"30px"}} className="rounded-circle shadow-sm" src={user.photoURL} alt="" /></div>
+                }
+                
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
