@@ -14,6 +14,7 @@ import Login from "./Components/Pages/Login/Login";
 import ScrollToTop from "react-scroll-to-top";
 import Register from "./Components/Pages/Register/Register";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import AllOrders from "./Components/Pages/Order/AllOrders";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           </PrivateRoute>}></Route>
           <Route path="/productdetials/:id" element={<ProductDetails></ProductDetails>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
+          <Route path="/myorders" element={<AllOrders></AllOrders>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/registration" element={<Register></Register>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>

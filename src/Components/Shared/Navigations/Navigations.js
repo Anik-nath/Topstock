@@ -54,6 +54,7 @@ const Navigations = () => {
                 Contact
               </Nav.Link>
               <NavDropdown title="Pages" id="basic-nav-dropdown">
+                <NavDropdown.Item as={HashLink} to="/myorders">My Orders</NavDropdown.Item>
                 <NavDropdown.Item as={HashLink} to="/terms">Terms & Conditions</NavDropdown.Item>
                 <NavDropdown.Item as={HashLink} to="/privacy">Our Privacy</NavDropdown.Item>
                 <NavDropdown.Item as={HashLink} to="/faq">FAQ</NavDropdown.Item>

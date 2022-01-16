@@ -5,12 +5,15 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { ChangeTitle } from "../../../titlechange/titlechange";
 import ProductCompany from "../../Shared/ProductCompany/ProductCompany";
+import useAuth from "../../../Hooks/useAuth";
 
 const ProductDetails = () => {
   ChangeTitle("Product details");
   const { id } = useParams();
   const [details, setDetails] = useState({});
   const [data,setData] = useState({});
+  const {user} = useAuth();
+
   useEffect(() => {
     const url = `http://localhost:5000/productdetails/${id}`;
     fetch(url)
@@ -46,6 +49,8 @@ const ProductDetails = () => {
       Customer: data?.Customer,
       Contact: data?.Contact,
       orderDate: new Date().toLocaleDateString(),
+      email: user.email,
+      proImage: details.image
     }
     // console.log(order);
     fetch("http://localhost:5000/orders",{
