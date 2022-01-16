@@ -13,6 +13,7 @@ import AuthProvider from "./Context/AuthProvider";
 import Login from "./Components/Pages/Login/Login";
 import ScrollToTop from "react-scroll-to-top";
 import Register from "./Components/Pages/Register/Register";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/about" element={<About></About>}></Route>
-          <Route path="/shop" element={<Shop></Shop>}></Route>
+          <Route path="/shop" element={<PrivateRoute>
+            <Shop></Shop>
+          </PrivateRoute>}></Route>
           <Route path="/productdetials/:id" element={<ProductDetails></ProductDetails>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>

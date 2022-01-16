@@ -10,7 +10,7 @@ const ProductDetails = () => {
   ChangeTitle("Product details");
   const { id } = useParams();
   const [details, setDetails] = useState({});
-
+  const [data,setData] = useState({});
   useEffect(() => {
     const url = `http://localhost:5000/productdetails/${id}`;
     fetch(url)
@@ -29,6 +29,40 @@ const ProductDetails = () => {
       count.innerHTML--;
     }
   };
+
+  // take orders data
+  const handleInput  = (e) =>{
+    const field = e.target.name;
+    const value = e.target.value;
+    const newField = {...data};
+    newField[field] = value;
+    setData(newField);
+  }
+  const handleSubmit = (e) => {
+    const order = {
+      ...data,
+      product: data?.product,
+      NumOfProduct: data?.NumOfProduct,
+      Customer: data?.Customer,
+      Contact: data?.Contact,
+      orderDate: new Date().toLocaleDateString(),
+    }
+    // console.log(order);
+    fetch("http://localhost:5000/orders",{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(order)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.insertedId){
+        alert('Place Order Successfully');
+      }
+    });
+    e.preventDefault();
+  }
 
   return (
     <div>
@@ -110,6 +144,19 @@ const ProductDetails = () => {
               <i className="fab fa-instagram border p-2 border-2 rounded-circle"></i>
               <i className="fab fa-linkedin border p-2 border-2 rounded-circle"></i>
               <i className="fab fa-twitter border p-2 border-2 rounded-circle"></i>
+            </div>
+            <div className="pt-3">
+              <form action="">
+               <div className="d-flex flex-row">
+               <input onBlur={handleInput} name="product" className="form-control bg-light" value={details.title} type="text" />
+               <input onBlur={handleInput} name="NumOfProduct" className="form-control bg-light" placeholder="Number of Product" type="text" />
+               </div>
+                <div className="d-flex flex-row">
+                <input onBlur={handleInput} name="Customer" required className="form-control bg-light" placeholder="Your name" type="text" />
+                <input onBlur={handleInput} name="Contact" required className="form-control bg-light" placeholder="Your contact" type="text" />
+                </div>
+                <button onClick={handleSubmit} type="submit" className="myButton my-3">Place Order <i className="fas fa-chevron-right"></i> </button>
+              </form>
             </div>
           </Col>
         </Row>

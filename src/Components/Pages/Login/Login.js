@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Form, Button, Alert, Container, Row, Col } from "react-bootstrap";
+import { Form, Alert, Container, Row, Col } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
-import google from '../../../images/google.png'
+import google from '../../../images/google.png';
 
 const Login = () => {
   const [data, setData] = useState({});
