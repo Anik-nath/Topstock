@@ -12,6 +12,7 @@ import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
 import AuthProvider from "./Context/AuthProvider";
 import Login from "./Components/Pages/Login/Login";
 import ScrollToTop from "react-scroll-to-top";
+import Register from "./Components/Pages/Register/Register";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/productdetials/:id" element={<ProductDetails></ProductDetails>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/registration" element={<Register></Register>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>
         </Routes>
         <Footer></Footer>

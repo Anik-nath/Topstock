@@ -14,8 +14,23 @@ const Contact = () => {
       >
         <Container>
           <Row>
-            <Col lg={6} sm={12} xs={12} md={12} className="pt-lg-0 pt-5 bg-danger mx-auto text-center">
-              <h1>Contact Us</h1>
+          <Col
+              lg={6}
+              sm={12}
+              xs={12}
+              md={12}
+              className="pt-lg-0 pt-5 mx-auto text-center"
+            >
+              <h1 className="display-4 fw-bold">Contact Us</h1>
+              <p className="fs-6 pt-3">
+                <Link
+                  style={{ color: "#333", textDecoration: "none" }}
+                  to="/home"
+                >
+                  Home
+                </Link>{" "}
+                / <span style={{ color: "orangered" }}>Contact Us</span>
+              </p>
             </Col>
           </Row>
         </Container>

@@ -14,8 +14,23 @@ const Faq = () => {
       >
         <Container>
           <Row>
-            <Col lg={6} sm={12} xs={12} md={12} className="pt-lg-0 pt-5 bg-danger mx-auto text-center">
-              <h1>FAQ</h1>
+          <Col
+              lg={6}
+              sm={12}
+              xs={12}
+              md={12}
+              className="pt-lg-0 pt-5 mx-auto text-center"
+            >
+              <h1 className="display-4 fw-bold">FAQ</h1>
+              <p className="fs-6 pt-3">
+                <Link
+                  style={{ color: "#333", textDecoration: "none" }}
+                  to="/home"
+                >
+                  Home
+                </Link>{" "}
+                / <span style={{ color: "orangered" }}>FAQ</span>
+              </p>
             </Col>
           </Row>
         </Container>
