@@ -1,5 +1,6 @@
 # TopStock Minimal Ecommerce site
 ## [Live Site](https://top-stock-109d9.web.app/)
+### [API Link](https://stormy-meadow-30073.herokuapp.com/shop)
 
 Our company focused on  a very minimal ecommerce solution (single Page category website) using React, Redux, Firebase, react-router, node, express, MongoDB, etc.
 
@@ -45,5 +46,5 @@ Replace the default react favicon and give an icon for our website.
 * We host our site on Firebase.
 * We host a server on Heroku.
 
-### [API](https://stormy-meadow-30073.herokuapp.com/shop)
+
 
