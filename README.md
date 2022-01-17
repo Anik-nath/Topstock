@@ -44,3 +44,6 @@ Replace the default react favicon and give an icon for our website.
 * Used Firebase for authentication
 * We host our site on Firebase.
 * We host a server on Heroku.
+
+### [API](https://stormy-meadow-30073.herokuapp.com/shop)
+
