@@ -15,7 +15,7 @@ const ProductDetails = () => {
   const {user} = useAuth();
 
   useEffect(() => {
-    const url = `http://localhost:5000/productdetails/${id}`;
+    const url = `https://stormy-meadow-30073.herokuapp.com/productdetails/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDetails(data));
@@ -53,7 +53,7 @@ const ProductDetails = () => {
       proImage: details.image
     }
     // console.log(order);
-    fetch("http://localhost:5000/orders",{
+    fetch("https://stormy-meadow-30073.herokuapp.com/orders",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -34,7 +34,9 @@ function App() {
           </PrivateRoute>}></Route>
           <Route path="/productdetials/:id" element={<ProductDetails></ProductDetails>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
-          <Route path="/myorders" element={<AllOrders></AllOrders>}></Route>
+          <Route path="/myorders" element={<PrivateRoute>
+            <AllOrders></AllOrders>
+          </PrivateRoute>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/registration" element={<Register></Register>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>

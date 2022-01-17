@@ -16,7 +16,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/shop`;
+    const url = `https://stormy-meadow-30073.herokuapp.com/shop`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));

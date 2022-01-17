@@ -101,10 +101,9 @@ const Navigations = () => {
               </Nav.Link>
               <Nav.Link eventKey={2} href="#user">
                 {
-                  !user.email ? <i className="fas fa-user-circle fs-5"></i>
+                  !user.photoURL ? <i className="fas fa-user fs-5"></i>
                   : <div><img style={{width:"30px",height:"30px"}} className="rounded-circle shadow-sm" src={user.photoURL} alt="" /></div>
                 }
-                
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

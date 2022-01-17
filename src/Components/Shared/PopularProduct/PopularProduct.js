@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Badge, Card, Col, Row, Spinner } from "react-bootstrap";
+import { Badge, Col, Row, Spinner } from "react-bootstrap";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const PopularProduct = () => {
   const [popular, setPopular] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/shop`;
+    const url = `https://stormy-meadow-30073.herokuapp.com/shop`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPopular(data));
