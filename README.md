@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# TopStock Minimal Ecommerce site
+## [Live Site](https://top-stock-109d9.web.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our company focused on  a very minimal ecommerce solution (single Page category website) using React, Redux, Firebase, react-router, node, express, MongoDB, etc.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* Website ideas are unique like the Themeforest website theme.
 
-### `npm start`
+* The home page has a header (simple navbar), Simple banner, Shop, Contact Us, About us, More Pages, and footer. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* On the home page, various parts. In showcase of products and popular products section have a relevant name, image, short description If a user clicks on the classes it will take the user to the Products Details page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* The Shop Page and Order page will be a private/protected route. If the user is not logged in, the private route redirects to the login page. After login, the user will be redirected to the page he/she wanted to go to. Also, make sure, after reloading the page of a private route, the user is not redirected to the login page. 
+ 
+* We will have another page on the top navigation bar (header) mentioning Shop. Clicking on the link or button will take the user to the Shop. On this page, users will see all the classes. That means the user will see all training services. Each item will have a name, description, image, and button. Once a user clicks on this button, it will take the user to the Order.
+ 
+* Implement email/ password (login/Register) based login system. The registration form should have the name and once a user is logged in, the user name and the logout button should appear on the user menu in the dropdown which will log out the user once clicked. Displaying images on the header.
+ 
+* If a user is logged in, he/she will unlock the private pages and inside that, a normal user without an account system will go to the login page.
+ 
+* Use a database to store information. It could be the MongoDB atlas database.
+ 
+* Meaningful readme.md file on client-side. containing our website name, a little description, link to our live site. And at least five bullet points mentioning the different features and functionality of our website.
+ 
+* We Make the website responsive. We Make sure the site looks different on desktop and mobile responsive. 
+ 
+* Make the website meaningful and consistent in look and feel. Give our website a relevant name Fitness Cloud. Images and all the content of the website have to be relevant. 
+ 
+* Clean and organized Code. Organize components and add comments when needed
+ 
+* use the .env file on the server, .env.local file on the client to hide DB user and password, etc. Also, use the .gitignore file
+ 
+* We Make the footer a little more realistic
+Replace the default react favicon and give an icon for our website.
+ Use icons whenever applicable and use fonts (google fonts)
+ 
+ 
+### Additional information:
+* We can use a local image 
+* Make carousel we use React silk Package.
+* Use React Bootstrap. And When needed we used mixed CSS.
+* We use react hook form, basic React Bootstrap form
+* Used Firebase for authentication
+* We host our site on Firebase.
+* We host a server on Heroku.
