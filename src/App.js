@@ -15,6 +15,7 @@ import ScrollToTop from "react-scroll-to-top";
 import Register from "./Components/Pages/Register/Register";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import AllOrders from "./Components/Pages/Order/AllOrders";
+import TermsNcondition from "./Components/Pages/TermsNcondition/TermsNcondition";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           </PrivateRoute>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/registration" element={<Register></Register>}></Route>
+          <Route path="/terms" element={<TermsNcondition></TermsNcondition>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>
         </Routes>
         <Footer></Footer>

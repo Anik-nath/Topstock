@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import { ChangeTitle } from "../../../titlechange/titlechange";
 
 const AllOrders = () => {
     const [orders,setOrders] = useState([]);
@@ -12,6 +13,8 @@ const AllOrders = () => {
         .then(res => res.json())
         .then(data => setOrders(data))
     },[user.email])
+
+    ChangeTitle("My All Orders");
   return (
     <div>
       <div
@@ -43,6 +46,7 @@ const AllOrders = () => {
         </Container>
       </div>
       <Container className="py-5">
+        <p className="lead text-center"><strong>Viwer:</strong> {user.email}</p>
         <Table className="text-center" responsive="sm" bordered striped hover size="sm">
           <thead style={{backgroundColor:"orangered",color:"#fff"}}>
             <tr>
