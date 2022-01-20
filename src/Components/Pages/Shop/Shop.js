@@ -70,6 +70,10 @@ const Shop = () => {
       </div>
       <div className="shop py-5">
         <Container>
+        <div className="d-flex justify-content-between align-items-center mb-4">
+        <h6>Showing {products.length} results</h6>
+        <h6>Sort By: Default Sorting</h6>
+        </div>
           <Row>
             <Col lg={3} md={3} sm={12} xs={12}>
               <h5 className="fw-bold mb-3">Product Categories</h5>

@@ -3,8 +3,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ChangeTitle } from "../../../titlechange/titlechange";
 
-const Faq = () => {
-  ChangeTitle("FAQ");
+const Cart = () => {
+  ChangeTitle("Cart");
   return (
     <div>
       <div
@@ -21,7 +21,7 @@ const Faq = () => {
               md={12}
               className="pt-lg-0 pt-5 mx-auto text-center"
             >
-              <h1 className="display-4 fw-bold">FAQ</h1>
+              <h1 className="display-4 fw-bold">My Cart</h1>
               <p className="fs-6 pt-3">
                 <Link
                   style={{ color: "#333", textDecoration: "none" }}
@@ -29,7 +29,7 @@ const Faq = () => {
                 >
                   Home
                 </Link>{" "}
-                / <span style={{ color: "orangered" }}>FAQ</span>
+                / <span style={{ color: "orangered" }}>Cart</span>
               </p>
             </Col>
           </Row>
@@ -39,4 +39,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default Cart;

@@ -16,6 +16,8 @@ import Register from "./Components/Pages/Register/Register";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import AllOrders from "./Components/Pages/Order/AllOrders";
 import TermsNcondition from "./Components/Pages/TermsNcondition/TermsNcondition";
+import Cart from "./Components/Pages/Cart/Cart";
+import Wishlist from "./Components/Pages/Wishlist/Wishlist";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/registration" element={<Register></Register>}></Route>
           <Route path="/terms" element={<TermsNcondition></TermsNcondition>}></Route>
+          <Route path="/cart" element={<Cart></Cart>}></Route>
+          <Route path="/wishlist" element={<Wishlist></Wishlist>}></Route>
           <Route path="/faq" element={<Faq></Faq>}></Route>
         </Routes>
         <Footer></Footer>

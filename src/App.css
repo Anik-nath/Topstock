@@ -61,5 +61,8 @@
   font-weight: 600;
   transition: 0.3s ease;
 }
-
+::selection {
+  color: #fff;
+  background: orangered;
+}
 
